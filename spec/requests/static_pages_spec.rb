@@ -10,9 +10,9 @@ describe "Static pages" do
     end
 
     it "should have the right title" do
-	  visit '/static_pages/home'
-	  expect(page).to have_title("Ruby on Rails Sample App | Home")
-	end
+  	  visit '/static_pages/home'
+  	  expect(page).to have_title("Ruby on Rails Sample App | Home")
+  	end
   end
 
   describe "Help page" do
@@ -23,9 +23,9 @@ describe "Static pages" do
     end
 
     it "should have the right title" do
-	  visit '/static_pages/help'
-	  expect(page).to have_title("Ruby on Rails Sample App | Help")
-	end
+  	  visit '/static_pages/help'
+  	  expect(page).to have_title("Ruby on Rails Sample App | Help")
+  	end
   end
 
   describe "About page" do
@@ -36,8 +36,21 @@ describe "Static pages" do
     end
 
     it "should have the right title" do
-	  visit '/static_pages/about'
-	  expect(page).to have_title("Ruby on Rails Sample App | About Us")
-	end
+  	  visit '/static_pages/about'
+  	  expect(page).to have_title("Ruby on Rails Sample App | About Us")
+  	end
+  end
+
+  describe "Contact page" do
+
+    it "should have the content 'Contact Us'" do
+      visit '/static_pages/contact'
+      expect(page).to have_content('Contact Us')
+    end
+
+    it "should have the right title" do
+      visit '/static_pages/contact'
+      expect(page).to have_title("Ruby on Rails Sample App | Contact Us")
+    end
   end
 end
